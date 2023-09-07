@@ -1,0 +1,367 @@
+*
+{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    margin:0px;
+    background-color: #292524;
+    color : white;
+    font-family:"Sono",sans-serif;
+    padding: 48px 64px 0px;
+}
+
+.header1
+{
+    margin-bottom: 40px;
+    /* text-align: center; */
+    display:flex;
+    align-items: center; 
+    justify-content:space-between;
+
+}
+.Logo
+{
+   
+    order:0;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Logo img
+{
+    width:60px;
+    height:60px;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    font-family:'Coiny',sans-serif;
+    color:white;
+    line-height:1;
+    margin-top:8px;
+    margin-left:10px;
+}
+.hidden
+{
+    /* display:none; */
+    /* Now this display property which we will add in form will not work thats 
+    simply because the class .fact-form which is the form class has also display property
+    so the display of that class will take priority over display of hidden class thats because
+    it is declare after hidden class */
+
+    /* So to overcome that we have !important parameter or css property which tell
+    browser to give it more priority over any other */
+    display:none !important;
+}
+.message
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top:24px;
+}
+.disputed
+{
+    color:#ef4444;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding:16px 32px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    border-radius:16px;
+}
+
+.category-list
+{
+    margin-bottom:16px;
+}
+.facts
+{
+    font-size: 19px;
+    line-height: 1.1;
+    background-color: #44403c;
+    margin-bottom:20px;
+    padding:16px;
+    display: flex;
+    align-items:center;
+    gap:20px;
+    letter-spacing:-1px;
+    border-radius:10px;
+}
+@media(max-width:1200px)
+{
+    .facts
+    {
+       flex-direction: column;
+       align-items: flex-end;
+       gap:12px;
+
+    }
+}
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    padding: 3px 10px 0px 10px;
+    margin-left:1px;
+    border-radius:100px;
+    cursor: pointer;
+}
+.vote-buttons
+{
+    flex-shrink:0;
+    margin-left:auto;
+    display:flex;
+    gap: 8px;
+}
+.vote-buttons button {
+    background-color: #78716c;
+    border:none;
+    font-size: 18px;
+    padding: 6px 11px;
+    border-radius:100px;
+    color:inherit;
+    font-weight: 200;
+    cursor: pointer;
+    transition:0.5s;
+
+}
+.vote-buttons button:hover
+{
+    transform: scale(120%);
+    background-color: #292524;
+}
+
+.center-container
+{
+    max-width:1499px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 80vh; */
+    
+}
+
+.grid-container
+{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    column-gap:50px;
+    /* height: 90vh; */
+    height: calc(100vh - 67px - 40px - 48px - 48px  );
+}
+
+.dropdown-menu
+{
+    /* border-radius:100px; */
+    border: none;
+    background-color:#292524;
+    
+}
+.drop-btn
+{
+    font-size:20px;
+    padding:20px 32px 17px;
+}
+@media(min-width:1500px)
+{
+    section{
+        overflow: auto;
+        padding-bottom: 40px;
+    }
+}
+@media(min-width:1200px)
+{
+    section{
+        overflow: auto;
+        padding-bottom: 40px;
+    }
+}
+@media(min-width:1300px)
+{
+    section{
+        overflow: auto;
+        padding-bottom: 40px;
+    }
+}
+@media(min-width:1400px)
+{
+    section{
+        overflow: auto;
+        padding-bottom: 40px;
+    }
+}
+@media(min-width:1024px)
+{
+    section{
+        overflow: auto;
+        padding-bottom: 40px;
+    }
+    
+}
+
+/* section{
+    overflow: scroll;
+    padding-bottom: 40px;
+} */
+.source:link,.source:visited
+{
+    color: #a8a29e;
+    text-decoration:none;
+    margin-left:15px;
+    transition:2s;
+}
+.source:hover,.source:active
+{
+    color:#3b82fc;
+}
+.btn 
+{
+    border:none;
+    font-family:"Coiny",sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size:18px;
+    padding:17px 0 13px;
+    background-image:linear-gradient(135deg,#3b82f6,rgb(240, 168, 24),#ef4444,#16a34a,#eab308);
+    color:inherit;
+
+    border-radius:100px;
+
+    cursor:pointer;
+    transition:1s;
+}
+.btn:hover
+{
+    transform:scale(115%) rotate(-3deg);
+    
+}
+.btn-large
+{
+    font-size:20px;
+    padding:20px 32px 17px;
+}
+.btn-all-categories
+{
+    margin-bottom:16px;
+    width: 100%;
+}
+.btn-category
+{
+    width:100%;
+    background-image: none;
+}
+@media(max-width:900px)
+{
+    .grid-container
+    {
+        grid-template-columns: 2fr;
+        /* align-items: center; */
+        row-gap:70px;
+    }
+    .header1
+    {
+        flex-direction: column;
+        gap:30px;
+    }
+    .droper
+    {
+        margin:auto;
+    }
+    .drop-btn
+    {
+        padding:20px 10px;
+        border-radius:100px;
+        border:none;
+    }
+    .dropdown-center
+    {
+        overflow: scroll;
+        padding-bottom:80px;
+        border-radius:10px;
+        padding-left:40px;
+        padding-right:40px;
+    }
+    .dropdown-menu
+    {
+        /* border-radius:100px; */
+        background-color:#292524;
+        border: none;
+
+    }
+    .btn:hover
+    {
+    transform:scale(70%);
+   
+    }
+    
+}
+/* Adding style to form */
+.fact-form input,.fact-form select
+{
+    width:220px;
+    background-color:#78716c;
+    border: none;
+    border-radius:10px;
+    padding: 10px;;
+    font-size:18px;
+    color:white;
+    font-family:inherit;
+}
+.fact-form select:hover
+{
+    background-color:#484645;   
+    transform:scale(90%);
+}
+.fact-form input::placeholder
+{
+    color:#a8a29e;
+
+}
+.fact-form input:first-child
+{
+    flex-grow:1;
+}
+.fact-form span
+{
+    font-weight:400;
+    font-size:18px;
+    margin-right: 18px;
+}
+
+@media(max-width:1000px)
+{
+    body{
+       padding:32px 48px; 
+    }
+    .fact-form
+    {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .fact-form input,.fact-form select
+    {
+        width: auto;
+    }
+}
